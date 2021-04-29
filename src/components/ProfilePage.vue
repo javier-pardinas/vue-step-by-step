@@ -2,7 +2,7 @@
 <template>
  <div class="profile-page">
  <!--AccountInfo: This is a component-->
-   <AccountInfo username='pepe'/> <!--username='pepe': this is a prop-->
+   <AccountInfo :username="user.username"/> <!--:username="user.username": this is a prop-->
  </div>
 </template>
  
@@ -17,7 +17,9 @@ export default {
  },
  data() {
    return {
-
+     user: {
+       username: 'matt'
+     }
    }
  }
 }
