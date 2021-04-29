@@ -8,6 +8,10 @@
 <script>
 export default {
 name: 'AccountInfo',
-props: ['username']//List of props that this component gets from its parent
+//we verify the props that we receive from our parent.
+//username: String: we want our username prop to only accept Strings
+ props: {
+   username: String
+ }
 }
 </script>
