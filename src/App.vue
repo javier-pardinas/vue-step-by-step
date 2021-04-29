@@ -3,6 +3,7 @@
     <Counter/>
     <AppOne/>
     <AppTwo/>
+    <AppThree/>
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import Counter from '@/components/Counter';
 import AppOne from '@/components/AppOne';
 import AppTwo from '@/components/AppTwo';
+import AppThree from '@/components/AppThree';
 
 export default {
   name: 'App',
   components: {
     Counter,
     AppOne,
-    AppTwo
+    AppTwo,
+    AppThree
   }
 }
 </script>
