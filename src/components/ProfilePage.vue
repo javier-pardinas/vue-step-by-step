@@ -1,7 +1,8 @@
 <!--Parent Component of AccountInfo-->
 <template>
  <div class="profile-page">
-   <AccountInfo/><!--This is a component-->
+ <!--AccountInfo: This is a component-->
+   <AccountInfo username='pepe'/> <!--username='pepe': this is a prop-->
  </div>
 </template>
  
