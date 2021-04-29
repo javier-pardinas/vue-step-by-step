@@ -6,6 +6,7 @@
     <AppThree/>
     <AppFour/>
     <AppFive/>
+    <AppSix/>
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import AppTwo from '@/components/AppTwo';
 import AppThree from '@/components/AppThree';
 import AppFour from '@/components/AppFour';
 import AppFive from '@/components/AppFive';
+import AppSix from '@/components/AppSix';
 
 export default {
   name: 'App',
@@ -25,7 +27,8 @@ export default {
     AppTwo,
     AppThree,
     AppFour,
-    AppFive
+    AppFive,
+    AppSix
   }
 }
 </script>
