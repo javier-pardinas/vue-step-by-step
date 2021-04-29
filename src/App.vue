@@ -10,6 +10,8 @@
     <ProfilePage/>
     <TodoList/>
     <ComputedProperties/>
+    <ComPropVersion/>
+    <WatcherVersion/> 
   </div>
 </template>
 
@@ -24,6 +26,8 @@ import AppSix from '@/components/AppSix';
 import ProfilePage from '@/components/ProfilePage';
 import TodoList from '@/components/TodoList';
 import ComputedProperties from '@/components/ComputedProperties';
+import ComPropVersion from '@/components/ComPropVersion';
+import WatcherVersion from '@/components/WatcherVersion';
 
 export default {
   name: 'App',
@@ -37,7 +41,9 @@ export default {
     AppSix,
     ProfilePage,
     TodoList,
-    ComputedProperties
+    ComputedProperties,
+    ComPropVersion,
+    WatcherVersion
   },
   created() {
     alert("App Created!");
