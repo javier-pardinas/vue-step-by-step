@@ -2,7 +2,7 @@
 <template>
  <div class="profile-page">
  <!--AccountInfo: This is a component-->
-   <AccountInfo :username="user.username"/> <!--:username="user.username": this is a prop-->
+   <AccountInfo :my-username="user.username"/> <!--:username="user.username": this is a prop-->
  </div>
 </template>
  
