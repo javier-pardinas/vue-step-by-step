@@ -8,6 +8,7 @@
     <AppFive/>
     <AppSix/>
     <ProfilePage/>
+    <TodoList/>
   </div>
 </template>
 
@@ -20,6 +21,7 @@ import AppFour from '@/components/AppFour';
 import AppFive from '@/components/AppFive';
 import AppSix from '@/components/AppSix';
 import ProfilePage from '@/components/ProfilePage';
+import TodoList from '@/components/TodoList';
 
 export default {
   name: 'App',
@@ -31,7 +33,8 @@ export default {
     AppFour,
     AppFive,
     AppSix,
-    ProfilePage
+    ProfilePage,
+    TodoList
   }
 }
 </script>
