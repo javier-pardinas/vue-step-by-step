@@ -7,12 +7,12 @@
       v-bind:todo="item"
       v-bind:key="item.id"/>
      </ol>
-     <a v-bind:href="url"> Vue.js Guide </a><!--Here href is the argument, which tells the v-bind directive to bind the element’s href attribute to the value of the expression url-->
+     <a :href="url"> Vue.js Guide </a><!--Here href is the argument, which tells the v-bind directive to bind the element’s href attribute to the value of the expression url-->
       <br>
       <!--Dynamic Arguments: v-bind:[myHref], v-on:[myEvent]-->
-     <a v-bind:[myHref]="url"> Vue.js Guide </a>
+     <a :[myHref]="url"> Vue.js Guide </a>
      <br>
-     <a v-on:[myEvent]="alertHello"> Alert Hello </a>
+     <a @[myEvent]="alertHello"> Alert Hello </a>
  </div>
 </template>
  
