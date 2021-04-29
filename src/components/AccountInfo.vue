@@ -12,7 +12,12 @@ name: 'AccountInfo',
 //we verify the props that we receive from our parent.
 //username: String: we want our username prop to only accept Strings
  props: {
-   myUsername: String
+   myUsername: {
+    type: String,
+    required: true,
+    validator: val => val.length >= 10,
+    default: 'no name'
+   }
  },
  //Here we put the methods that we are gonna use in this component
  methods: {
