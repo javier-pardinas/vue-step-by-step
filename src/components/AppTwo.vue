@@ -1,12 +1,12 @@
 <template>
-  <div class="app-one">
-  MESSAGE: {{message}}<!--accesing data and display it-->
+  <div class="app-two">
+  App 2
   </div>
 </template>
 
 <script>
 export default {
-name: 'AppOne',
+name: 'AppTwo',
   //data: object that defines the component. we can access this properties in our template
   data() {
     return {
