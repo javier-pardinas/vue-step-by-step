@@ -13,6 +13,7 @@
     <ComPropVersion/>
     <WatcherVersion/>
     <ComputedSetter/> 
+    <WatchExample/>
   </div>
 </template>
 
@@ -30,6 +31,7 @@ import ComputedProperties from '@/components/ComputedProperties';
 import ComPropVersion from '@/components/ComPropVersion';
 import WatcherVersion from '@/components/WatcherVersion';
 import ComputedSetter from '@/components/ComputedSetter';
+import WatchExample from '@/components/WatchExample';
 
 export default {
   name: 'App',
@@ -46,7 +48,8 @@ export default {
     ComputedProperties,
     ComPropVersion,
     WatcherVersion,
-    ComputedSetter
+    ComputedSetter,
+    WatchExample
   },
   created() {
     alert("App Created!");
