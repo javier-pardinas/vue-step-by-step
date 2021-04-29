@@ -5,7 +5,7 @@
  <!--:username="user.username": this is a prop-->
    <AccountInfo 
    :my-username="user.username" 
-   @changeUsername="user.username = 'Paco'"/> <!--@changeUsername: this is an event that we pass to the child to change the username-->
+   @changeUsername="changeUsername($event)"/> <!--@changeUsername: this is an event that we pass to the child to change the username-->
  </div>
 </template>
  
@@ -24,6 +24,11 @@ export default {
        username: 'matt'
      }
    }
- }
+ },
+ methods: {
+   changeUsername (username) {
+     this.user.username = username;
+   }
+}
 }
 </script>

@@ -18,7 +18,7 @@ name: 'AccountInfo',
  methods: {
     //this method emits the event got from our parent component
    changeUsername() {
-     this.$emit('changeUsername')
+     this.$emit('changeUsername', 'Pepe')
    }
  }
 }
