@@ -1,6 +1,8 @@
 <template>
   <div class="counter">
   COUNTER: {{counter}}<!--accesing data and display it-->
+  <br>
+  <span v-once>This will never change: {{counter}}</span><!--perform one-time interpolations that do not update on data change by using the v-once directive-->
   </div>
 </template>
 
@@ -17,9 +19,9 @@ export default {
   //everytime there is a change in the state of the component (data())
   mounted() {
     //this method sums 1 to the counter every second
-    /*setInterval(() => {
+    setInterval(() => {
       this.counter++
-    }, 1000)*/
+    }, 1000)
   }
 }
 </script>
