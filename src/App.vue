@@ -4,6 +4,7 @@
     <AppOne/>
     <AppTwo/>
     <AppThree/>
+    <AppFour/>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Counter from '@/components/Counter';
 import AppOne from '@/components/AppOne';
 import AppTwo from '@/components/AppTwo';
 import AppThree from '@/components/AppThree';
+import AppFour from '@/components/AppFour';
 
 export default {
   name: 'App',
@@ -19,7 +21,8 @@ export default {
     Counter,
     AppOne,
     AppTwo,
-    AppThree
+    AppThree,
+    AppFour
   }
 }
 </script>
