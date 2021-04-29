@@ -9,6 +9,7 @@
     <AppSix/>
     <ProfilePage/>
     <TodoList/>
+    <ComputedProperties/>
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import AppFive from '@/components/AppFive';
 import AppSix from '@/components/AppSix';
 import ProfilePage from '@/components/ProfilePage';
 import TodoList from '@/components/TodoList';
+import ComputedProperties from '@/components/ComputedProperties';
 
 export default {
   name: 'App',
@@ -34,7 +36,8 @@ export default {
     AppFive,
     AppSix,
     ProfilePage,
-    TodoList
+    TodoList,
+    ComputedProperties
   },
   created() {
     alert("App Created!");
