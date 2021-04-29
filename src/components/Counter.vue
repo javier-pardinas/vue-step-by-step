@@ -17,9 +17,9 @@ export default {
   //everytime there is a change in the state of the component (data())
   mounted() {
     //this method sums 1 to the counter every second
-    setInterval(() => {
+    /*setInterval(() => {
       this.counter++
-    }, 1000)
+    }, 1000)*/
   }
 }
 </script>
