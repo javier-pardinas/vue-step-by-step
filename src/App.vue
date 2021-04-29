@@ -11,7 +11,8 @@
     <TodoList/>
     <ComputedProperties/>
     <ComPropVersion/>
-    <WatcherVersion/> 
+    <WatcherVersion/>
+    <ComputedSetter/> 
   </div>
 </template>
 
@@ -28,6 +29,7 @@ import TodoList from '@/components/TodoList';
 import ComputedProperties from '@/components/ComputedProperties';
 import ComPropVersion from '@/components/ComPropVersion';
 import WatcherVersion from '@/components/WatcherVersion';
+import ComputedSetter from '@/components/ComputedSetter';
 
 export default {
   name: 'App',
@@ -43,7 +45,8 @@ export default {
     TodoList,
     ComputedProperties,
     ComPropVersion,
-    WatcherVersion
+    WatcherVersion,
+    ComputedSetter
   },
   created() {
     alert("App Created!");
