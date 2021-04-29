@@ -1,6 +1,7 @@
 <template>
   <div class="app-six">
-    App6
+    <p>{{ message }}</p>
+    <input v-model="message"><!--v-model="message": we get what the user types inside this input and put it inside our state message-->
   </div>
 </template>
 
@@ -10,7 +11,7 @@ name: 'AppSix',
   //data: object that defines the component. we can access this properties in our template
   data() {
     return {
-      
+      message: 'Hello Vue!'
     }
   }
 }
