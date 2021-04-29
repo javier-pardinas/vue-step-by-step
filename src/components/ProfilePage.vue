@@ -2,7 +2,10 @@
 <template>
  <div class="profile-page">
  <!--AccountInfo: This is a component-->
-   <AccountInfo :my-username="user.username"/> <!--:username="user.username": this is a prop-->
+ <!--:username="user.username": this is a prop-->
+   <AccountInfo 
+   :my-username="user.username" 
+   @changeUsername="user.username = 'Paco'"/> <!--@changeUsername: this is an event that we pass to the child to change the username-->
  </div>
 </template>
  
