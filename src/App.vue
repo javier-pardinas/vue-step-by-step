@@ -35,6 +35,9 @@ export default {
     AppSix,
     ProfilePage,
     TodoList
+  },
+  created() {
+    alert("App Created!");
   }
 }
 </script>

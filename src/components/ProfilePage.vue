@@ -6,6 +6,7 @@
    <AccountInfo 
    :my-username="user.username" 
    @changeUsername="changeUsername($event)"/> <!--@changeUsername: this is an event that we pass to the child to change the username-->
+   {{oldUsername}}
  </div>
 </template>
  
@@ -22,13 +23,20 @@ export default {
    return {
      user: {
        username: 'matt'
-     }
+     },
+     oldUsername: null
    }
  },
  methods: {
    changeUsername (username) {
      this.user.username = username;
    }
-}
+ },
+  watch: {
+    username(newValue, oldValue) {
+      this.user.username = newValue;
+      this.oldUsername = oldValue;
+    }
+  }
 }
 </script>
