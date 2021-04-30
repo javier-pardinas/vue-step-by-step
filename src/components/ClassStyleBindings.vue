@@ -1,8 +1,7 @@
 <template>
   <div class="class-style-bindings">
-  <!--If you would like to also toggle a class in the list conditionally, you can do it with a ternary expression:-->
-   <!--This will always apply errorClass, but will only apply activeClass when isActive is truthy.-->
-   <div v-bind:class="[isActive ? activeClass : '', errorClass]">
+  <!--it’s also possible to use the object syntax inside array syntax:-->
+   <div v-bind:class="[{ active: isActive }, errorClass]">
    ClassStyleBindings
    </div>
   </div>
@@ -13,12 +12,19 @@ export default {
 name: 'ClassStyleBindings',
 data() {
     return {
-    activeClass: 'active',
-    errorClass: 'text-danger'
+  activeClass: 'active',
+  errorClass: 'text-danger'
     }
 },
 computed: {
-
+//We can also bind to a computed property that returns an object. 
+//This is a common and powerful pattern:
+ classObject() {
+    return {
+      'active': this.isActive && !this.error,
+      'text-danger': this.error && this.error.type === 'fatal'
+    }
+  }
 }
 }
 </script>
