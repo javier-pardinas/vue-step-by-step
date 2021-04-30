@@ -1,7 +1,8 @@
 <template>
   <div class="class-style-bindings">
-  <!--We can pass an array to v-bind:class to apply a list of classes:-->
-   <div v-bind:class="[activeClass, errorClass]">
+  <!--If you would like to also toggle a class in the list conditionally, you can do it with a ternary expression:-->
+   <!--This will always apply errorClass, but will only apply activeClass when isActive is truthy.-->
+   <div v-bind:class="[isActive ? activeClass : '', errorClass]">
    ClassStyleBindings
    </div>
   </div>
