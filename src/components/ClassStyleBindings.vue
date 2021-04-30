@@ -1,7 +1,7 @@
 <template>
   <div class="class-style-bindings">
-  <!--it’s also possible to use the object syntax inside array syntax:-->
-   <div v-bind:class="[{ active: isActive }, errorClass]">
+  <!--The object syntax for v-bind:style is pretty straightforward - it looks almost like CSS, except it’s a JavaScript object. You can use either camelCase or kebab-case (use quotes with kebab-case) for the CSS property names:-->
+   <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">
    ClassStyleBindings
    </div>
   </div>
@@ -12,28 +12,16 @@ export default {
 name: 'ClassStyleBindings',
 data() {
     return {
-  activeClass: 'active',
-  errorClass: 'text-danger'
+    activeColor: 'red',
+    fontSize: 30
     }
 },
 computed: {
-//We can also bind to a computed property that returns an object. 
-//This is a common and powerful pattern:
- classObject() {
-    return {
-      'active': this.isActive && !this.error,
-      'text-danger': this.error && this.error.type === 'fatal'
-    }
-  }
+
 }
 }
 </script>
 
 <style>
-.active {
-color: green;
-}
-.text-danger {
-color:red;
-}
+
 </style>
