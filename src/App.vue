@@ -52,6 +52,9 @@
     <h1>ListRendering</h1>
     <ListRendering/>
     <hr>
+    <h1>ForWithIf</h1>
+    <ForWithIf/>
+    <hr>
   </div>
 </template>
 
@@ -73,6 +76,7 @@ import WatchExample from '@/components/WatchExample';
 import ClassStyleBindings from '@/components/ClassStyleBindings';
 import ConditionalRendering from '@/components/ConditionalRendering';
 import ListRendering from '@/components/ListRendering';
+import ForWithIf from '@/components/ForWithIf';
 
 export default {
   name: 'App',
@@ -93,7 +97,8 @@ export default {
     WatchExample,
     ClassStyleBindings,
     ConditionalRendering,
-    ListRendering
+    ListRendering,
+    ForWithIf
   },
   created() {
     alert("App Created!");

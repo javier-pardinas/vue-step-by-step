@@ -24,9 +24,11 @@
 <div v-for="(value, name, index) in object" :key="index">
  {{ index }}. {{ name }}: {{ value }}
 </div>
+<!--
 <ol>
 <li v-for="n in evenNumbers" :key="n">{{ n }}</li>
 </ol>
+-->
  </div>
 </template>
  
@@ -49,11 +51,12 @@ export default {
     }
   },
   computed: {
+    /*
     evenNumbers() {
     return numbers.filter(number => {
       return number % 2 === 0;
     })
-  }
+  }*/
   },
   mounted() {
 
