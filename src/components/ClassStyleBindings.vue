@@ -1,8 +1,7 @@
 <template>
   <div class="class-style-bindings">
   <!--We can pass an object to v-bind:class to dynamically toggle classes:-->
-    <div class="static"
-    v-bind:class="{ 'active': isActive, 'text-danger': hasError }">
+    <div v-bind:class="classObject">
     ClassStyleBindings
     </div>
   </div>
@@ -14,17 +13,16 @@ name: 'ClassStyleBindings',
 data() {
     return {
         //booleans for style classes:
-        isActive: false,
-        hasError: true
+        classObject: {
+        'active': false,
+        'text-danger': true
+  }
     }
 }
 }
 </script>
 
 <style>
-.static {
-text-transform: uppercase;
-}
 .active {
 color: green;
 }
