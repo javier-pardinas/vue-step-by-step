@@ -6,6 +6,7 @@
     {{ item.message }}
   </li>
 </ul>
+<button @click="items.push({ message: 'Baz' })">add item</button>
 <!--Inside v-for blocks we have full access to parent scope properties. v-for also supports an optional second argument for the index of the current item.-->
 <ul id="example-2">
   <li v-for="(item, index) of items" :key="index">
@@ -41,6 +42,9 @@ export default {
             publishedAt: '2016-04-10'
         }
     }
+  },
+  mounted() {
+
   }
 }
 </script>
