@@ -12,12 +12,19 @@ export default {
 name: 'ClassStyleBindings',
 data() {
     return {
-        //booleans for style classes:
-        classObject: {
-        'active': false,
-        'text-danger': true
-  }
+    isActive: true,
+    error: null
     }
+},
+computed: {
+//We can also bind to a computed property that returns an object. 
+//This is a common and powerful pattern:
+ classObject() {
+    return {
+      'active': this.isActive && !this.error,
+      'text-danger': this.error && this.error.type === 'fatal'
+    }
+  }
 }
 }
 </script>
