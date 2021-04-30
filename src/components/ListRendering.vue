@@ -18,6 +18,10 @@
     {{ value }}
   </li>
 </ul>
+<!--You can also provide a second argument for the property’s name (a.k.a. key). And another for the index:-->
+<div v-for="(value, name, index) in object" :key="index">
+ {{ index }}. {{ name }}: {{ value }}
+</div>
  </div>
 </template>
  
