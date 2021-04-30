@@ -15,6 +15,7 @@
     <ComputedSetter/> 
     <WatchExample/>
     <ClassStyleBindings/>
+    <ConditionalRendering/>
   </div>
 </template>
 
@@ -34,6 +35,7 @@ import WatcherVersion from '@/components/WatcherVersion';
 import ComputedSetter from '@/components/ComputedSetter';
 import WatchExample from '@/components/WatchExample';
 import ClassStyleBindings from '@/components/ClassStyleBindings';
+import ConditionalRendering from '@/components/ConditionalRendering';
 
 export default {
   name: 'App',
@@ -52,7 +54,8 @@ export default {
     WatcherVersion,
     ComputedSetter,
     WatchExample,
-    ClassStyleBindings
+    ClassStyleBindings,
+    ConditionalRendering
   },
   created() {
     alert("App Created!");
