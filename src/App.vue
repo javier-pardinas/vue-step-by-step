@@ -58,6 +58,9 @@
     <h1>TodoListExample</h1>
     <TodoListExample/>
     <hr>
+    <h1>EventHandling</h1>
+    <EventHandling/>
+    <hr>
   </div>
 </template>
 
@@ -81,6 +84,7 @@ import ConditionalRendering from '@/components/ConditionalRendering';
 import ListRendering from '@/components/ListRendering';
 import ForWithIf from '@/components/ForWithIf';
 import TodoListExample from '@/components/TodoListExample';
+import EventHandling from '@/components/EventHandling';
 
 export default {
   name: 'App',
@@ -103,7 +107,8 @@ export default {
     ConditionalRendering,
     ListRendering,
     ForWithIf,
-    TodoListExample
+    TodoListExample,
+    EventHandling
   },
   created() {
     alert("App Created!");
