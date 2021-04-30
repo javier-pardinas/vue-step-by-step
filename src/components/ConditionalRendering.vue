@@ -19,6 +19,9 @@
   <label>Email</label>
   <input placeholder="Enter your email address" key="email-input">
 </div>
+<div v-show="ok">
+Hello
+</div>
 </div>
 </template>
  
@@ -27,8 +30,14 @@ export default {
   name:'ConditionalRendering',
   data() {
       return {
-          loginType: 'username'
+          loginType: 'username',
+          ok: true
+
       }
   }
 }
 </script>
+
+<style>
+
+</style>
