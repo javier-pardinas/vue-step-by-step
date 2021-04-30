@@ -1,9 +1,9 @@
 <template>
   <div class="class-style-bindings">
-  <!--We can pass an object to v-bind:class to dynamically toggle classes:-->
-    <div v-bind:class="classObject">
-    ClassStyleBindings
-    </div>
+  <!--We can pass an array to v-bind:class to apply a list of classes:-->
+   <div v-bind:class="[activeClass, errorClass]">
+   ClassStyleBindings
+   </div>
   </div>
 </template>
 
@@ -12,19 +12,12 @@ export default {
 name: 'ClassStyleBindings',
 data() {
     return {
-    isActive: true,
-    error: null
+    activeClass: 'active',
+    errorClass: 'text-danger'
     }
 },
 computed: {
-//We can also bind to a computed property that returns an object. 
-//This is a common and powerful pattern:
- classObject() {
-    return {
-      'active': this.isActive && !this.error,
-      'text-danger': this.error && this.error.type === 'fatal'
-    }
-  }
+
 }
 }
 </script>
