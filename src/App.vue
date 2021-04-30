@@ -55,6 +55,9 @@
     <h1>ForWithIf</h1>
     <ForWithIf/>
     <hr>
+    <h1>TodoListExample</h1>
+    <TodoListExample/>
+    <hr>
   </div>
 </template>
 
@@ -77,6 +80,7 @@ import ClassStyleBindings from '@/components/ClassStyleBindings';
 import ConditionalRendering from '@/components/ConditionalRendering';
 import ListRendering from '@/components/ListRendering';
 import ForWithIf from '@/components/ForWithIf';
+import TodoListExample from '@/components/TodoListExample';
 
 export default {
   name: 'App',
@@ -98,7 +102,8 @@ export default {
     ClassStyleBindings,
     ConditionalRendering,
     ListRendering,
-    ForWithIf
+    ForWithIf,
+    TodoListExample
   },
   created() {
     alert("App Created!");
