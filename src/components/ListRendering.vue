@@ -24,6 +24,9 @@
 <div v-for="(value, name, index) in object" :key="index">
  {{ index }}. {{ name }}: {{ value }}
 </div>
+<ol>
+<li v-for="n in evenNumbers" :key="n">{{ n }}</li>
+</ol>
  </div>
 </template>
  
@@ -41,8 +44,16 @@ export default {
             title: 'How to do lists in Vue',
             author: 'Jane Doe',
             publishedAt: '2016-04-10'
-        }
+        },
+        numbers: [ 1, 2, 3, 4, 5 ]
     }
+  },
+  computed: {
+    evenNumbers() {
+    return numbers.filter(number => {
+      return number % 2 === 0;
+    })
+  }
   },
   mounted() {
 
