@@ -1,22 +1,57 @@
 <template>
   <div id="app">
+    <hr>
+    <h1>Counter</h1>
     <Counter/>
+    <hr>
+    <h1>AppOne</h1>
     <AppOne/>
+    <hr>
+    <h1>AppTwo</h1>
     <AppTwo/>
+    <hr>
+    <h1>AppThree</h1>
     <AppThree/>
+    <hr>
+    <h1>AppFour</h1>
     <AppFour/>
+    <hr>
+    <h1>AppFive</h1>
     <AppFive/>
+    <hr>
+    <h1>AppSix</h1>
     <AppSix/>
+    <hr>
+    <h1>ProfilePage</h1>
     <ProfilePage/>
+    <hr>
+    <h1>TodoList</h1>
     <TodoList/>
+    <hr>
+    <h1>ComputedProperties</h1>
     <ComputedProperties/>
+    <hr>
+    <h1>ComPropVersion</h1>
     <ComPropVersion/>
+    <hr>
+    <h1>WatcherVersion</h1>
     <WatcherVersion/>
+    <hr>
+    <h1>ComputedSetter</h1>
     <ComputedSetter/> 
+    <hr>
+    <h1>WatchExample</h1>
     <WatchExample/>
+    <hr>
+    <h1>ClassStyleBindings</h1>
     <ClassStyleBindings/>
+    <hr>
+    <h1>ConditionalRendering</h1>
     <ConditionalRendering/>
+    <hr>
+    <h1>ListRendering</h1>
     <ListRendering/>
+    <hr>
   </div>
 </template>
 
