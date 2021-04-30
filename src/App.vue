@@ -14,6 +14,7 @@
     <WatcherVersion/>
     <ComputedSetter/> 
     <WatchExample/>
+    <ClassStyleBindings/>
   </div>
 </template>
 
@@ -32,6 +33,7 @@ import ComPropVersion from '@/components/ComPropVersion';
 import WatcherVersion from '@/components/WatcherVersion';
 import ComputedSetter from '@/components/ComputedSetter';
 import WatchExample from '@/components/WatchExample';
+import ClassStyleBindings from '@/components/ClassStyleBindings';
 
 export default {
   name: 'App',
@@ -49,7 +51,8 @@ export default {
     ComPropVersion,
     WatcherVersion,
     ComputedSetter,
-    WatchExample
+    WatchExample,
+    ClassStyleBindings
   },
   created() {
     alert("App Created!");
