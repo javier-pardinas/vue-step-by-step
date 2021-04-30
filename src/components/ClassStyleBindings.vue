@@ -9,6 +9,11 @@
    <div v-bind:style="[baseStyles, overridingStyles]">
    ClassStyleBindings2
    </div>
+   <br>
+   <!--you can provide an array of multiple (prefixed) values to a style property, for example:-->
+   <div v-bind:style="{ display: ['-webkit-box', '-ms-flexbox', 'flex'] }">
+   ClassStyleBindings3
+   </div>
   </div>
 </template>
 
