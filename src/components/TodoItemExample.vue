@@ -1,12 +1,16 @@
-<!--Child Component of TodoList-->
+<!--Child Component of TodoListExample-->
 <template>
  <div class="todo-item-example">
-     TodoItemExample
+    <li>
+      {{ title }}
+      <button v-on:click="$emit('remove')">Remove</button>
+    </li>
  </div>
 </template>
  
 <script>
 export default {
-  name:'TodoItemExample'
+  name:'TodoItemExample',
+  props: ['title']
 }
 </script>
