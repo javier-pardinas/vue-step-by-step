@@ -4,6 +4,11 @@
    <div v-bind:style="styleObject">
    ClassStyleBindings
    </div>
+   <br>
+   <!--The array syntax for v-bind:style allows you to apply multiple style objects to the same element:-->
+   <div v-bind:style="[baseStyles, overridingStyles]">
+   ClassStyleBindings2
+   </div>
   </div>
 </template>
 
