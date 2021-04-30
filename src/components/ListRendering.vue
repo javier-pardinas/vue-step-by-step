@@ -12,6 +12,12 @@
     {{ parentMessage }} - {{ index }} - {{ item.message }}
   </li>
 </ul>
+<!--You can also use v-for to iterate through the properties of an object.-->
+<ul id="v-for-object" class="demo">
+  <li v-for="(value, i) in object" :key="i">
+    {{ value }}
+  </li>
+</ul>
  </div>
 </template>
  
@@ -24,7 +30,12 @@ export default {
         items: [
         { message: 'Foo' },
         { message: 'Bar' }
-        ]
+        ],
+        object: {
+            title: 'How to do lists in Vue',
+            author: 'Jane Doe',
+            publishedAt: '2016-04-10'
+        }
     }
   }
 }
