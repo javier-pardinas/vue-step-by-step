@@ -1,7 +1,7 @@
 <template>
   <div class="class-style-bindings">
-  <!--The object syntax for v-bind:style is pretty straightforward - it looks almost like CSS, except it’s a JavaScript object. You can use either camelCase or kebab-case (use quotes with kebab-case) for the CSS property names:-->
-   <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">
+  <!--It is often a good idea to bind to a style object directly so that the template is cleaner:-->
+   <div v-bind:style="styleObject">
    ClassStyleBindings
    </div>
   </div>
@@ -12,9 +12,11 @@ export default {
 name: 'ClassStyleBindings',
 data() {
     return {
-    activeColor: 'red',
-    fontSize: 30
+    styleObject: {
+    color: 'red',
+    fontSize: '13px'
     }
+  }
 },
 computed: {
 
