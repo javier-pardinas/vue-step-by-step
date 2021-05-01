@@ -52,6 +52,10 @@
         <button v-on:click.ctrl.exact="onCtrlClick">A</button>
         <!-- this will only fire when no system modifiers are pressed -->
         <button v-on:click.exact="onClick">A</button>
+        <!--These modifiers restrict the handler to events triggered by a specific mouse button.-->
+        <div v-on:click.left="doThat">...</div>
+        <div v-on:click.right="doThat">...</div>
+        <div v-on:click.middle="doThat">...</div>
     </div>
   </div>
 </template>
