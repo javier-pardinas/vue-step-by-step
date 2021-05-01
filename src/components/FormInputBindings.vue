@@ -81,12 +81,20 @@
 
     <!--Radio. when checked: vm.pick === vm.a-->
     <input type="radio" v-model="pick" v-bind:value="a">
-    
+
     <!--when selected: typeof vm.selected // => 'object' vm.selected.number // => 123-->
     <select v-model="selected5">
         <!-- inline object literal -->
         <option v-bind:value="{ number: 123 }">123</option>
     </select>
+
+    <!--Modifiers-->
+    <!-- synced after "change" instead of "input" -->
+    <input v-model.lazy="msg">
+    <!--If you want user input to be automatically typecast as a Number, you can add the number modifier to your v-model managed inputs-->
+    <input v-model.number="age" type="number">
+    <!--If you want whitespace from user input to be trimmed automatically, you can add the trim modifier to your v-model-managed inputs:-->
+    <input v-model.trim="msg">
 
   </div>
 </template>
