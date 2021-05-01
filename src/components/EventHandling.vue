@@ -46,6 +46,12 @@
         <input v-on:keyup.alt.67="clear">
         <!-- Ctrl + Click -->
         <div v-on:click.ctrl="doSomething">Do something</div>
+        <!-- this will fire even if Alt or Shift is also pressed -->
+        <button v-on:click.ctrl="onClick">A</button>
+        <!-- this will only fire when Ctrl and no other keys are pressed -->
+        <button v-on:click.ctrl.exact="onCtrlClick">A</button>
+        <!-- this will only fire when no system modifiers are pressed -->
+        <button v-on:click.exact="onClick">A</button>
     </div>
   </div>
 </template>
