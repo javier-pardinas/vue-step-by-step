@@ -79,6 +79,15 @@
     false-value="no"
     >
 
+    <!--Radio. when checked: vm.pick === vm.a-->
+    <input type="radio" v-model="pick" v-bind:value="a">
+    
+    <!--when selected: typeof vm.selected // => 'object' vm.selected.number // => 123-->
+    <select v-model="selected5">
+        <!-- inline object literal -->
+        <option v-bind:value="{ number: 123 }">123</option>
+    </select>
+
   </div>
 </template>
 
@@ -102,8 +111,11 @@ data() {
         ],
         picked2: null,
         toggle1: null,
-        selected: 4,
-        toggle2: null
+        selected4: null,
+        toggle2: null,
+        pick: null,
+        selected5: null,
+
     }
 }
 }
