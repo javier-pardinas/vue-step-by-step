@@ -40,6 +40,8 @@
         <!--You can directly use any valid key names exposed via KeyboardEvent.key as modifiers by converting them to kebab-case. 
         the handler will only be called if $event.key is equal to 'PageDown'.-->
         <input v-on:keyup.page-down="onPageDown">
+        <!--Using keyCode attributes is also permitted:-->
+        <input v-on:keyup.13="submit">
     </div>
   </div>
 </template>
