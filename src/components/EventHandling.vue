@@ -35,6 +35,11 @@
         <!-- immediately, instead of waiting for `onScroll` to complete  -->
         <!-- in case it contains `event.preventDefault()`-->
         <div v-on:scroll.passive="onScroll">...</div>
+        <!-- only call `vm.submit()` when the `key` is `Enter` -->
+        <input v-on:keyup.enter="submit">
+        <!--You can directly use any valid key names exposed via KeyboardEvent.key as modifiers by converting them to kebab-case. 
+        the handler will only be called if $event.key is equal to 'PageDown'.-->
+        <input v-on:keyup.page-down="onPageDown">
     </div>
   </div>
 </template>
