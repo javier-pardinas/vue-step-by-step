@@ -61,6 +61,9 @@
     <h1>EventHandling</h1>
     <EventHandling/>
     <hr>
+    <h1>FormInputBindings</h1>
+    <FormInputBindings/>
+    <hr>
   </div>
 </template>
 
@@ -85,6 +88,7 @@ import ListRendering from '@/components/ListRendering';
 import ForWithIf from '@/components/ForWithIf';
 import TodoListExample from '@/components/TodoListExample';
 import EventHandling from '@/components/EventHandling';
+import FormInputBindings from '@/components/FormInputBindings';
 
 export default {
   name: 'App',
@@ -108,7 +112,8 @@ export default {
     ListRendering,
     ForWithIf,
     TodoListExample,
-    EventHandling
+    EventHandling,
+    FormInputBindings
   },
   created() {
     alert("App Created!");
