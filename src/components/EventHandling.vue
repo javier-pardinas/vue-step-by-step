@@ -42,6 +42,10 @@
         <input v-on:keyup.page-down="onPageDown">
         <!--Using keyCode attributes is also permitted:-->
         <input v-on:keyup.13="submit">
+        <!-- Alt + C -->
+        <input v-on:keyup.alt.67="clear">
+        <!-- Ctrl + Click -->
+        <div v-on:click.ctrl="doSomething">Do something</div>
     </div>
   </div>
 </template>
