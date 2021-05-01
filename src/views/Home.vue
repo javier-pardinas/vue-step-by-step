@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-md-4 col-lg4" v-for="(data,index) in products" :key="index">
         <img :src="data.image" class="img-fluid">
-         <h2 @click="goToDetails()">{{data.productTitle}}</h2>
+         <h2 @click="goToDetails(data.productId)">{{data.productTitle}}</h2>
       </div>
     </div>
   </div>
@@ -41,8 +41,8 @@ export default {
     }
   },
   methods: {
-  goToDetails() {
-    this.$router.push({name:'Details'})
+  goToDetails(prodId) {
+    this.$router.push({name:'Details', params:{Pid:prodId}})
   }
   }
   
