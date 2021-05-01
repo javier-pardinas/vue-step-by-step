@@ -61,16 +61,24 @@
     <span>Selected: {{ selected3 }}</span>
 
     <!-- `picked` is a string "a" when checked -->
-    <input type="radio" v-model="picked" value="a">
+    <input type="radio" v-model="picked2" value="a">
 
     <!-- `toggle` is either true or false -->
-    <input type="checkbox" v-model="toggle">
+    <input type="checkbox" v-model="toggle1">
 
     <!-- `selected` is a string "abc" when the first option is selected -->
-    <select v-model="selected">
+    <select v-model="selected4">
     <option value="abc">ABC</option>
     </select>
-    
+
+    <!--Checkbox-->
+    <input
+    type="checkbox"
+    v-model="toggle2"
+    true-value="yes"
+    false-value="no"
+    >
+
   </div>
 </template>
 
@@ -91,7 +99,11 @@ data() {
             { text: 'One', value: 'A' },
             { text: 'Two', value: 'B' },
             { text: 'Three', value: 'C' }
-        ]
+        ],
+        picked2: null,
+        toggle1: null,
+        selected: 4,
+        toggle2: null
     }
 }
 }
