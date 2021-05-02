@@ -21,11 +21,11 @@ export default {
   methods: {
     //mutation increment
     increment () {
-      this.$store.commit('increment', 10)
+      this.$store.commit('increment', {amount: 10})
     },
     //mutation decrement
     decrement () {
-    	this.$store.commit('decrement', 10)
+    	this.$store.commit('decrement', {amount: 10})
     }
   }
 
