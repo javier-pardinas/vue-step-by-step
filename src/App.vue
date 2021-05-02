@@ -14,17 +14,20 @@
       <router-link class="nav-link" to="/contact">Contact</router-link>
       </li>
     </NavSlot>
+    <Counter/>
     <router-view/>
   </div>
 </template>
 
 <script>
 import NavSlot from '@/components/NavSlot';
+import Counter from '@/components/Counter';
 
 export default {
   name: 'App',
   components: {
-    NavSlot
+    NavSlot,
+    Counter
   },
 }
 </script>

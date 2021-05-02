@@ -6,9 +6,15 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  //data:
   state: {
+    count: 0
   },
+  //modify the state:
   mutations: {
+    increment(state) {
+      state.count++
+    }
   },
   actions: {
   },

@@ -1,8 +1,9 @@
 <template>
   <div class="counter">
-  COUNTER: {{counter}}<!--accesing data and display it-->
+  COUNTER: {{this.$store.state.count}}<!--accesing state of store and displaying it-->
+  <button @click="increment">increment counter</button><!--executing method increment() that commits the mutation increment-->
   <br>
-  <span v-once>This will never change: {{counter}}</span><!--perform one-time interpolations that do not update on data change by using the v-once directive-->
+  <span v-once>This will never change: {{this.$store.state.count}}</span><!--perform one-time interpolations that do not update on data change by using the v-once directive-->
   </div>
 </template>
 
@@ -19,9 +20,16 @@ export default {
   //everytime there is a change in the state of the component (data())
   mounted() {
     //this method sums 1 to the counter every second
-    setInterval(() => {
+   /* setInterval(() => {
       this.counter++
-    }, 1000)
+    }, 1000)*/
+  },
+  methods: {
+    increment() {
+    //commit mutation increment from store
+    this.$store.commit('increment')
+    console.log(this.$store.state.count)
+  }
   }
 }
 </script>
