@@ -16,6 +16,7 @@
     </NavSlot>
     <Counter/>
     <VuexTodos/>
+    <FetchPosts/>
     <router-view/>
   </div>
 </template>
@@ -24,13 +25,15 @@
 import NavSlot from '@/components/NavSlot';
 import Counter from '@/components/Counter';
 import VuexTodos from '@/components/VuexTodos';
+import FetchPosts from '@/components/FetchPosts';
 
 export default {
   name: 'App',
   components: {
     NavSlot,
     Counter,
-    VuexTodos
+    VuexTodos,
+    FetchPosts
   },
 }
 </script>
