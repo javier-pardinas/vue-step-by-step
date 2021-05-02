@@ -15,6 +15,7 @@
       </li>
     </NavSlot>
     <Counter/>
+    <VuexTodos/>
     <router-view/>
   </div>
 </template>
@@ -22,12 +23,14 @@
 <script>
 import NavSlot from '@/components/NavSlot';
 import Counter from '@/components/Counter';
+import VuexTodos from '@/components/VuexTodos';
 
 export default {
   name: 'App',
   components: {
     NavSlot,
-    Counter
+    Counter,
+    VuexTodos
   },
 }
 </script>
