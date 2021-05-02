@@ -35,8 +35,8 @@ export default new Vuex.Store({
   },
   //modify the state:
   mutations: {
-    increment: state => state.count++,
-    decrement: state => state.count--
+    increment: (state, n) => state.count+=n,
+    decrement: (state, n) => state.count-=n
   },
 
   actions: {
