@@ -11,14 +11,14 @@
 export default {
   name: 'FetchPosts',
   computed: {
-    //posts from the state of store:
+    //posts from the state of the module posts:
     posts() {
-    return this.$store.state.posts
+    return this.$store.getters.getPosts
     }
   },
   mounted() {
-    //dispatch the action getPosts() that gets posts from an api and commits the set_posts() mutation:
-    this.$store.dispatch("getPosts");
+    //dispatch the action fetchPosts() that gets posts from an api and commits the set_posts() mutation:
+    this.$store.dispatch("fetchPosts");
   }
 }
 </script>

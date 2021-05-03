@@ -13,7 +13,7 @@
 export default {
   name: 'Counter',
    computed: {
-    //count object of the state of store
+    //count object from the state of the counter module
     count () {
 	    return this.$store.getters.getCount
     }

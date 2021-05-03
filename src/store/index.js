@@ -5,6 +5,7 @@ import Vuex from 'vuex'
 
 //modules:
 import counter from "./counter";
+import posts from "./posts";
 
 Vue.use(Vuex)
 
@@ -17,8 +18,6 @@ export default new Vuex.Store({
       { id: 3, text: 'Do Another Thing', done: true },
       { id: 4, text: 'Do The Other Thing', done: false }
     ],
-    //empty array filled with the data that we get from our api
-    posts: []
   },
   //getters are like computed properties for stores. they allow us to access an specific data.
   //Like computed properties, a getter's result is cached based on its dependencies, 
@@ -39,38 +38,18 @@ export default new Vuex.Store({
   },
   //modify the state:
   mutations: {
-    //set the posts array with the data that we get from the api using the action getPosts()
-    SET_POSTS(state, posts) {
-      state.posts = posts
-      }
+
   },
 
   //actions for fetching and validating data:
   actions: {
-    //fetch data from an api and set the posts array with the data by commiting the SET_POSTS() mutation
-    getPosts({commit}) {
-      // GET request using fetch with error handling
-      fetch('https://my-json-server.typicode.com/typicode/demo/posts')
-      .then(async response => {
-        const data = await response.json();
-        // check for error response
-        if (!response.ok) {
-          // get error message from body or default to response statusText
-          const error = (data && data.message) || response.statusText;
-          return Promise.reject(error);
-        }
-        commit('SET_POSTS', data)
-      })
-      .catch(error => {
-        this.errorMessage = error;
-        console.error("There was an error!", error);
-      });
-    }
+
   },
   //we divide our store in modules. By just importing and adding it here, we have access 
   //to everything inside this module. Each module can contain its own state, 
   //mutations, actions, getters, and even nested modules 
   modules: {
-    counter
+    counter,
+    posts
   }
 })
