@@ -15,7 +15,7 @@ export default {
    computed: {
     //count object of the state of store
     count () {
-	    return this.$store.state.count
+	    return this.$store.getters.getCount
     }
   },
   methods: {
@@ -34,6 +34,5 @@ export default {
       })
     }
   }
-
 }
 </script>

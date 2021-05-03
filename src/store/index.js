@@ -3,12 +3,14 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+//modules:
+import counter from "./counter";
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   //data:
   state: {
-    count: 0,
     todos: [
       { id: 1, text: 'Do This', done: true },
       { id: 2, text: 'Do That', done: false },
@@ -37,8 +39,6 @@ export default new Vuex.Store({
   },
   //modify the state:
   mutations: {
-    increment: (state, payload) => state.count+=payload.amount,
-    decrement: (state, payload) => state.count-=payload.amount,
     //set the posts array with the data that we get from the api using the action getPosts()
     SET_POSTS(state, posts) {
       state.posts = posts
@@ -67,6 +67,10 @@ export default new Vuex.Store({
       });
     }
   },
+  //we divide our store in modules. By just importing and adding it here, we have access 
+  //to everything inside this module. Each module can contain its own state, 
+  //mutations, actions, getters, and even nested modules 
   modules: {
+    counter
   }
 })
