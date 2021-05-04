@@ -1,54 +1,15 @@
 <template>
-  <div class="home">
-    <h1>Home</h1>
-    <div class="row">
-      <div class="col-md-4 col-lg4" v-for="(data,index) in products" :key="index">
-        <img :src="data.image" class="img-fluid">
-         <h2 @click="goToDetails(data.productId)">{{data.productTitle}}</h2>
-      </div>
-    </div>
-  </div>
+  <hello-world />
 </template>
 
 <script>
-export default {
-  name: 'Home',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App',
-      products:[
-      {
-        productTitle:"ABCN",
-        image       : require('../assets/product2.jpg'),
-        productId:1
-      },
-      {
-        productTitle:"KARMA",
-        image       : require('../assets/product3.jpg'),
-        productId:2
-      },
-      {
-        productTitle:"Tino",
-        image       : require('../assets/product5.jpg'),
-        productId:3
-      },
-      {
-        productTitle:"EFG",
-        image       : require('../assets/product6.jpg'),
-        productId:4
-      }
-      ]
-    }
-  },
-  methods: {
-  goToDetails(prodId) {
-    this.$router.push({name:'Details', params:{Pid:prodId}})
-  }
-  }
-  
-}
-</script>
+  import HelloWorld from '../components/HelloWorld'
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>
+  export default {
+    name: 'Home',
+
+    components: {
+      HelloWorld,
+    },
+  }
+</script>
